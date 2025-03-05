@@ -41,7 +41,7 @@ def install_tesseract():
         return None
 
 # 📍 Vérification et installation
-TESSERACT_PATH = install_tesseract()
+TESSERACT_PATH = r"C:\Users\math\AppData\Local\Programs\Tesseract-OCR"
 if TESSERACT_PATH:
     pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
 
