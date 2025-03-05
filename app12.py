@@ -29,18 +29,6 @@ def install_tesseract():
                 )
             return shutil.which("tesseract")
         
-        elif os_name == "Linux":
-            tesseract_path = shutil.which("tesseract")
-            if not tesseract_path:
-                st.info("Installation de Tesseract en cours pour Linux...")
-                subprocess.run(
-                    ["sudo", "apt", "update"], check=True
-                )
-                subprocess.run(
-                    ["sudo", "apt", "install", "-y", "tesseract-ocr"], check=True
-                )
-            return shutil.which("tesseract")
-        
         elif os_name == "Darwin":  # macOS
             tesseract_path = shutil.which("tesseract")
             if not tesseract_path:
